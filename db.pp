@@ -8,5 +8,6 @@ package {'screen':
 
 service {'mysql-server':
         ensure => running,
-        require Package["apache2"],
+	enable => true,
+        require Package['mysql-server'],
 }
